@@ -121,9 +121,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0
 .topnav .cta:hover{background:var(--primary-d);}
 
 /* hero band */
-.hero-band{background:linear-gradient(165deg,#e7f0ff,#d6e4ff 60%,#caddff);border-bottom:1px solid #cdddf5;position:relative;overflow:hidden;}
-.hero-band:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.05) 1px,transparent 1px);background-size:32px 32px;}
-.hero-band-in{max-width:1120px;margin:0 auto;padding:48px 20px 54px;position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;}
+.hero-band{background:linear-gradient(180deg,#eef4ff,#e4eeff);border-bottom:1px solid #dbe5f7;position:relative;overflow:hidden;}
+.hero-band-in{max-width:1120px;margin:0 auto;padding:48px 20px 54px;position:relative;z-index:1;}
 .hero-band h1{font-size:36px;line-height:1.3;font-weight:800;letter-spacing:-.5px;color:var(--ink);margin:0 0 14px;}
 .hero-band .hl{position:relative;color:var(--accent-d);}
 .hero-band .hl:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:9px;background:rgba(16,185,129,.22);z-index:-1;}
@@ -131,30 +130,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0
 .chips{display:flex;flex-wrap:wrap;gap:10px;}
 .chips span{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #dbe5f7;color:#334155;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;box-shadow:0 4px 10px rgba(30,58,138,.06);}
 .chips span img{width:18px;height:18px;}
-/* hero AI panel */
-.hpanel{background:#fff;border-radius:16px;border:1px solid #d8e2f7;box-shadow:0 30px 64px -26px rgba(15,23,42,.45);overflow:hidden;}
-.hpanel-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;background:linear-gradient(110deg,#1e3a8a,#2563EB 70%);color:#fff;}
-.hpanel-top .l{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;}
-.hpanel-top .l .dot{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.25);}
-.hpanel-top .d{font-size:11px;font-weight:700;background:rgba(255,255,255,.18);padding:3px 10px;border-radius:999px;}
-.hpanel-body{padding:14px 14px 4px;}
-.hpanel-cap{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px;}
-.hrow{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;font-size:13px;}
-.hrow.best{border-color:var(--accent);background:#ecfdf5;}
-.hrow .s{font-weight:700;}
-.hrow .p{font-weight:800;font-size:14px;font-variant-numeric:tabular-nums;}
-.hrow.best .p{color:var(--accent-d);}
-.hrow .bar{grid-column:1/-1;height:5px;border-radius:99px;background:#e7edf6;overflow:hidden;margin-top:2px;}
-.hrow .bar i{display:block;height:100%;background:#94a3b8;}
-.hrow.best .bar i{background:var(--accent);}
-.htag{font-size:9.5px;font-weight:800;color:#fff;background:var(--accent);padding:2px 7px;border-radius:5px;margin-left:6px;}
-.hfoot{display:flex;align-items:center;justify-content:space-between;margin:4px 0 14px;padding:11px 14px;border-radius:10px;background:#0f172a;color:#fff;}
-.hfoot span{font-size:11.5px;font-weight:600;color:#cbd5e1;}
-.hfoot b{font-size:16px;font-weight:800;color:#34d399;font-variant-numeric:tabular-nums;}
+.hero-deco{position:absolute;right:24px;top:30px;display:flex;gap:14px;opacity:.9;}
+.hero-deco img{width:44px;height:44px;}
 @media (max-width:760px){
   .topnav nav{display:none;}
-  .hero-band-in{grid-template-columns:1fr;gap:28px;}
   .hero-band h1{font-size:26px;}
+  .hero-deco{display:none;}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://appadaycreator.com/"},{"@type":"ListItem","position":2,"name":"診断/アドバイス","item":"https://appadaycreator.com/category/advisor/"},{"@type":"ListItem","position":3,"name":"お得な買い物比較ツール無料Webツール","item":"https://appadaycreator.com/shopping-comparison-tool/"}]}</script>
@@ -182,38 +163,19 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0
     </header>
 
     <section class="hero-band">
+      <div class="hero-deco" aria-hidden="true">
+        <img src="assets/icons/split/03-08.png" alt="">
+        <img src="assets/icons/split/01-04.png" alt="">
+        <img src="assets/icons/split/03-06.png" alt="">
+      </div>
       <div class="hero-band-in">
-        <div>
-          <h1>価格・送料・ポイント還元を<span class="hl">まとめて比較</span></h1>
-          <p class="sub">無料・登録不要・ブラウザ内処理で安心。Amazon・楽天・Yahoo!の実質最安値をAIが自動計算します。</p>
-          <div class="chips">
-            <span><img src="assets/icons/split/03-06.png" alt="">完全無料</span>
-            <span><img src="assets/icons/split/01-01.png" alt="">登録不要</span>
-            <span><img src="assets/icons/split/01-07.png" alt="">プライバシーファースト</span>
-            <span><img src="assets/icons/split/01-08.png" alt="">スマホ対応</span>
-          </div>
-        </div>
-        <div class="hpanel" aria-hidden="true">
-          <div class="hpanel-top">
-            <span class="l"><span class="dot"></span>AIが実質価格を自動比較</span>
-            <span class="d">解析完了</span>
-          </div>
-          <div class="hpanel-body">
-            <div class="hpanel-cap">実質価格（送料・ポイント還元込み）</div>
-            <div class="hrow best">
-              <span class="s">楽天市場 <span class="htag">最安</span></span><span class="p">¥25,640</span>
-              <span class="bar"><i style="width:91%"></i></span>
-            </div>
-            <div class="hrow">
-              <span class="s">Amazon</span><span class="p">¥27,900</span>
-              <span class="bar"><i style="width:99%"></i></span>
-            </div>
-            <div class="hrow">
-              <span class="s">Yahoo!ショッピング</span><span class="p">¥28,050</span>
-              <span class="bar"><i style="width:100%"></i></span>
-            </div>
-            <div class="hfoot"><span>最安ショップで</span><b>¥2,410 おトク</b></div>
-          </div>
+        <h1>価格・送料・ポイント還元を<span class="hl">まとめて比較</span></h1>
+        <p class="sub">無料・登録不要・ブラウザ内処理で安心。Amazon・楽天・Yahoo!の実質最安値をAIが自動計算します。</p>
+        <div class="chips">
+          <span><img src="assets/icons/split/03-06.png" alt="">完全無料</span>
+          <span><img src="assets/icons/split/01-01.png" alt="">登録不要</span>
+          <span><img src="assets/icons/split/01-07.png" alt="">プライバシーファースト</span>
+          <span><img src="assets/icons/split/01-08.png" alt="">スマホ対応</span>
         </div>
       </div>
     </section>
