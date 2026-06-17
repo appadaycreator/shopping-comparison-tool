@@ -343,12 +343,27 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0
         <!-- FAQ セクション -->
         <div class="card" style="margin-top:8px;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
-            <div style="display:flex;flex-direction:column;gap:14px;">
-            
-            
-            
-            
-            
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <details open style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+                <summary style="font-weight:700;font-size:14px;cursor:pointer;color:#1e293b;">Amazon・楽天・Yahoo!を比較して最安値を見つけるには？</summary>
+                <p style="margin-top:8px;font-size:13px;color:#475569;line-height:1.8;">本ツールに商品名、各ECサイトの価格、送料、ポイント還元率を入力するだけで、実質最安値を自動計算します。複数EC間の総コスト比較により、最もお得な購入先を即座に判定できます。</p>
+              </details>
+              <details style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+                <summary style="font-weight:700;font-size:14px;cursor:pointer;color:#1e293b;">価格比較ツールでポイント還元を含めた計算とは？</summary>
+                <p style="margin-top:8px;font-size:13px;color:#475569;line-height:1.8;">楽天やAmazonのポイント還元率を%で入力すると、実質価格（価格＋送料−ポイント還元額）を自動計算します。次回利用が条件のポイント還元も、割引率として換算して総コストに反映させています。</p>
+              </details>
+              <details style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+                <summary style="font-weight:700;font-size:14px;cursor:pointer;color:#1e293b;">買い物比較ツールは本当に無料で使えますか？</summary>
+                <p style="margin-top:8px;font-size:13px;color:#475569;line-height:1.8;">はい、完全無料・登録不要・ログイン不要でご利用いただけます。すべての処理がブラウザ内で完結するため、サーバーへの通信費もかかりません。</p>
+              </details>
+              <details style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+                <summary style="font-weight:700;font-size:14px;cursor:pointer;color:#1e293b;">入力したデータはどこに保存されますか？</summary>
+                <p style="margin-top:8px;font-size:13px;color:#475569;line-height:1.8;">入力情報はお使いのデバイスのブラウザ内（localStorage）のみに保存されます。外部サーバーやクラウドへの送信は一切ありません。プライバシーは完全に保護されます。</p>
+              </details>
+              <details style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;">
+                <summary style="font-weight:700;font-size:14px;cursor:pointer;color:#1e293b;">スマートフォンやタブレットでも使えますか？</summary>
+                <p style="margin-top:8px;font-size:13px;color:#475569;line-height:1.8;">はい、スマートフォン・タブレット・PCすべてに完全対応しています。レスポンシブデザインにより、あらゆるデバイスでストレスなくご利用いただけます。</p>
+              </details>
             </div>
         </div>
 
@@ -681,6 +696,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
 <h2 style="font-size:1.125rem;font-weight:700;margin:0 0 1rem;color:#1e293b;border-left:4px solid #4f46e5;padding-left:10px">こんな方・シーンで役立ちます</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem">
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem 1.1rem"><p style="font-weight:700;color:#1e293b;margin:0 0 .35rem;font-size:.92rem">🛒 高額家電を買う前に</p><p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0">数千円の価格差も見逃さず、送料・ポイント込みの実質最安値を比較できます。</p></div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem 1.1rem"><p style="font-weight:700;color:#1e293b;margin:0 0 .35rem;font-size:.92rem">🎁 セール・キャンペーン中</p><p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0">楽天マラソンやPayPay還元など、変動するポイント還元率を反映した実質比較に。</p></div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem 1.1rem"><p style="font-weight:700;color:#1e293b;margin:0 0 .35rem;font-size:.92rem">📦 日用品のまとめ買い</p><p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0">送料込みのトータルコストで、どのECで買うのが本当にお得かを判定します。</p></div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem 1.1rem"><p style="font-weight:700;color:#1e293b;margin:0 0 .35rem;font-size:.92rem">💳 ポイントを賢く使いたい</p><p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0">各ECのポイント制度の違いを踏まえ、還元後の本当のお得度を見える化します。</p></div>
 </div>
 </div>
 <!-- r31-extended-faq -->
@@ -727,9 +746,12 @@ document.addEventListener('DOMContentLoaded',()=>{
 <!-- r31-extra-guide -->
 <div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
 <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.06)">
-
-<h3 style="font-size:.95rem;font-weight:700;margin:1.25rem 0 .6rem;color:#1e293b">関連ツールのご紹介</h3>
-
+<h3 style="font-size:.95rem;font-weight:700;margin:0 0 .9rem;color:#1e293b;border-left:4px solid #2563EB;padding-left:10px">関連ツールのご紹介</h3>
+<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#374151;line-height:2">
+<li><a href="https://appadaycreator.com/point-optimizer/" style="color:#2563EB;font-weight:600">ポイント・マイル最適化診断</a> — 手持ちのカード・ポイントから最もお得な使い方を診断</li>
+<li><a href="https://appadaycreator.com/gadget-timing-advisor/" style="color:#2563EB;font-weight:600">Gadget Timing Advisor</a> — 家電・ガジェットの買い替えタイミングをアドバイス</li>
+<li><a href="lp/" style="color:#2563EB;font-weight:600">お得な比較AIの特徴を見る</a> — 機能や使い方をまとめた紹介ページ</li>
+</ul>
 </div>
 </div>
 
